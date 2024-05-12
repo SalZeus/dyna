@@ -1,10 +1,15 @@
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import {Header} from "./components/shared/Header";
-import {Footer} from "./components/shared/Footer"
+import {Header} from "../components/shared/Header";
+import {Footer} from "../components/shared/Footer"
+import "app/sass/globals.sass";
+import {Ubuntu} from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const ubuntu = Ubuntu({
+  weight: ["300", "500", "700"],
+  subsets: ["latin-ext"]
+
+})
 
 export const metadata: Metadata = {
   title: "Dyna",
@@ -18,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={ubuntu.className}>
         <Header />
         {children}
         <Footer />
