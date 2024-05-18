@@ -4,13 +4,13 @@ import styles from "./Header.module.scss";
 export const Header = () =>{
     return(
         <header>
-          <nav>
-            <ul>
+          <nav className={styles.navbar}>
+            <ul className={styles.navItems}>
               <Link href="/">
-                <li>Home</li>
+                <li className={styles.navLink}>Home</li>
               </Link>
               <Link href="/store">
-                <li>Store</li>
+                <li className={styles.navLink}>Store</li>
               </Link>
             </ul>
           </nav>

@@ -8,10 +8,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const nextConfig = {
-  sassOptions: {
-    includePaths: [join(__dirname, 'src/sass')],
-    prependData: `@import "main.sass"`,
-  },
+  // sassOptions: {
+  //   includePaths: [join(__dirname, 'src/sass')],
+  //   prependData: `@import "main.sass"`,
+  // },
+  images:{
+    remotePatterns: [
+    {
+      hostname: "cdn.shopify.com",
+      protocol: "https"
+    }
+    ]
+  }
 };
 
 export default nextConfig;
