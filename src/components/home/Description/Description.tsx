@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './Description.module.sass';
+import { MotionDiv } from '../MotionDiv/MotionDiv';
 
 
 export const Description = () => {
@@ -16,19 +17,29 @@ export const Description = () => {
         "Description__button--border": hasBorder,
     })
 
+    const imageVariants = {
+        hidden: {opacity: 0, scale: 0.25},
+        visible: {opacity: 1, scale: 1}
+    }
+
     console.log(buttonStyles);
 
-    return(
+    return(      
         <section className={styles.Description}>
         <button className={buttonStyles} onClick={handleClick} title="button">
-            <div className={styles.Description__imageContainer}>
+            <MotionDiv 
+                variants={imageVariants}
+                initial="hidden"
+                animate="visible"
+                className={styles.Description__imageContainer}
+            >
                 <Image
                     src="/images/description.png"
                     alt="products marketplace"
                     fill
                     priority={false}
                 />
-            </div>
+            </MotionDiv>
         </button>
         <div className={styles.Description__text}>
             <h2>Soluciona todo tipo de problemas de iluminación!</h2>

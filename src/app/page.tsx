@@ -1,6 +1,6 @@
 import { Description } from "../components/home/Description";
 import { Hero } from "../components/home/Hero";
-import { MainProduct } from "../components/home/MainProducts";
+import { MainProducts } from "../components/home/MainProducts";
 
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
 
       <Description />
 
-      <MainProduct />
+      <MainProducts />
       
     </main>
   );
