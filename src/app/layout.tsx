@@ -4,8 +4,7 @@ import {Header} from "../components/shared/Header";
 import {Footer} from "../components/shared/Footer"
 import "app/sass/globals.sass";
 import {Ubuntu} from "next/font/google";
-import { Description } from "app/components/home/Description";
-import { Hero } from "app/components/home/Hero";
+
 
 const ubuntu = Ubuntu({
   weight: ["300", "500", "700"],
@@ -28,10 +27,6 @@ export default function RootLayout({
       <body className={ubuntu.className}>
         
         <Header />
-
-        <Hero />
-
-        <Description />
 
         {children}
 
