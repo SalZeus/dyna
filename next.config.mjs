@@ -35,7 +35,7 @@ const __dirname = dirname(__filename);
 const nextConfig = {
   sassOptions: {
     includePaths: [join(__dirname, 'src/sass')],
-    // prependData: `@import "main.sass"`,
+    // prependData: `@import "main.sass";`,
     //error tends to be here ^^^^^^^^^
   },
   images:{
