@@ -22,9 +22,9 @@
       font-size: 1.125rem;
       line-height: 1.5;
       letter-spacing: 0.5px;
-      border: 2px solid $main-contrast;
-      color: $text-color;
-      text-shadow: 0 0 7px $main-contrast, 0 0 10px $main-contrast,0 0 21px $main-contrast;
+      border: 2px solid #ff4980;
+      color: #fff;
+      text-shadow: 0 0 7px #ff4980, 0 0 10px #ff4980,0 0 21px #ff4980;
       padding: 0.5rem 1rem;
       border-radius: 1rem;
       margin-top: 1rem;
@@ -43,7 +43,7 @@
       margin: 1rem 0px;
       }
       .ProductView__price{
-      color: $color-secondary;
+      color: #e4e1f6;
       font-size: 2.125rem;
       font-weight: 700;
       }
