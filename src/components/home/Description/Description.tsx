@@ -2,7 +2,7 @@
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import { useState } from 'react';
-import styles from './Description.module.sass';
+import styles from './Description.module.scss';
 import { MotionDiv } from '../MotionDiv/MotionDiv';
 
 
