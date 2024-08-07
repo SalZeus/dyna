@@ -9,9 +9,8 @@ export const createAccessToken = async (email: string, password: string) => {
     "email": email,
     "password": password
   })
-  
+
   const { accessToken, expiresAt } = customerAccessTokenCreate?.customerAccessToken
-  console.log(accessToken)
 
   if(accessToken){
     cookiesStore.set("accessToken", accessToken, {
@@ -24,15 +23,3 @@ export const createAccessToken = async (email: string, password: string) => {
     return accessToken
   }
 }
-
-// try {
-//   const response = await graphqlClient.request(customerAccessTokenCreateMutation, {
-//     "email": email,
-//     "password": password
-//   })
-//   const { customerAccessTokenCreate } = response
-//   // ... rest of your code using customerAccessTokenCreate
-// } catch (error) {
-//   console.error("Error creating access token:", error)
-//   // Handle the error appropriately (e.g., display an error message to the user)
-// }

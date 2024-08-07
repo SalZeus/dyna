@@ -4,11 +4,11 @@ import styles from "./LoginForm.module.scss";
 
 export const LoginForm = () => {
 
-const handleSubmit = async (event) => {
-    const formData = new FormData(event.target)
-    event.preventDefault;
-    await handleLogin(formData)
-}
+  const handleSubmit = async (event) => {
+    const formData = new FormData(event.target);
+    event.preventDefault();
+    await handleLogin(formData);
+  }
 
   return (
     <div className={styles.NewAccountForm}  >
