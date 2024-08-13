@@ -3,6 +3,8 @@ import { Description } from "../../components/home/Description";
 import { Hero } from "../../components/home/Hero";
 import { MainProducts } from "../../components/home/MainProducts";
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata ={
   title:"Dyna Illumination",
   description: "Soluciones de iluminación sostenibles",

@@ -3,12 +3,18 @@ import { useState } from "react";
 import styles from "./NewAccountForm.module.scss";
 import { handleCreateUser } from "app/actions";
 
+export const dynamic = "force-dynamic"
+
+
 export const NewAccountForm = () => {
 
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     await handleCreateUser(formData)

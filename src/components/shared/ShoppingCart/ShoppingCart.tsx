@@ -41,7 +41,7 @@ export default function ShoppingCart() {
           </span>
         )
       }
-      <button className={styles.ShoppingCart__cart} onClick={handleOpen}>
+      <button className={styles.ShoppingCart__cart} onClick={handleOpen} title="cart">
         <FaShoppingCart />
       </button>
       {isOpen && hasItems && (

@@ -1,10 +1,17 @@
 "use client"
 import { handleLogin } from "app/actions";
 import styles from "./LoginForm.module.scss";
+import { SyntheticEvent } from "react";
+
+ export const runtime = "edge"
 
 export const LoginForm = () => {
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+
+  }) => {
     const formData = new FormData(event.target);
     event.preventDefault();
     await handleLogin(formData);
