@@ -6,13 +6,13 @@ $text-color: #fff;
 $gradient: linear-gradient(270deg, #4f56ff, #ff4980);
 $main-contrast: #ff4980;
 
-.StoreLayout{
+.StoreLayout {
   display: flex;
   flex-direction: column;
   padding: 0 4rem;
   margin: 0 auto;
-    }
-  .StoreLayout__list{
+
+  &__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -20,8 +20,10 @@ $main-contrast: #ff4980;
     flex-flow: row wrap;
     column-gap: 1rem;
     margin-bottom: 2rem;
+    row-gap: 1rem;
   }
-  .StoreLayout__chip{
+
+  &__chip {
     background: linear-gradient(109.6deg, rgb(193, 98, 253) 11.2%, rgb(0, 49, 165) 91.1%);
     border-radius: 3rem;
     padding: 0.5rem 1rem;
@@ -29,3 +31,4 @@ $main-contrast: #ff4980;
     color: white;
     font-weight: bold;
   }
+}

@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.45",
+    "@next/bundle-analyzer": "^14.2.5",
+    "ai": "^3.3.6",
     "classnames": "^2.5.1",
     "framer-motion": "^11.1.9",
     "graphql": "^16.9.0",
@@ -19,7 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "sanitize-html": "^2.13.0"
+    "sanitize-html": "^2.13.0",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@types/node": "^20",
