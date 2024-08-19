@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import {Header} from "../components/shared/Header";
 import {Footer} from "../components/shared/Footer"
-import "app/sass/globals.sass";
+import "app/scss/globals.scss";
 import {Ubuntu} from "next/font/google";
 
 

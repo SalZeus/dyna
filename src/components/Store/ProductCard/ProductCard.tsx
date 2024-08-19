@@ -21,7 +21,7 @@ export const ProductCard = ({ product }: ProductCardInterface) => {
         <div className={styles.ProductCard__info}>
           <h3>{product.title}</h3>
         </div>
-        <span className={styles.ProductCard__priceTag}>${product.price} USD</span>
+        <span className={styles.ProductCard__priceTag}>${product.price} COP</span>
       </article>
     </Link>
   );
