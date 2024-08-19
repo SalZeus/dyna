@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { validateAccessToken } from 'app/utils/auth/validateAccessToken'
 import styles from './Header.module.scss'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
 const NoSSRShoppingCart = dynamic(() => import("../ShoppingCart"), {ssr: false})
 
@@ -15,12 +16,17 @@ export const Header = async () => {
         <ul className={styles.Header__list}>
           <li>
             <Link href="/">
-              Home
+              <Image src="/images/bombillaNaranja.png" alt="bombillito" width={25} height={27}></Image>
             </Link>
           </li>
+          {/* <li>
+            <Link href="/">
+              Home
+            </Link>
+          </li> */}
           <li>
             <Link href="/store">
-              Store
+              Tienda
             </Link>
           </li>
           <li>
