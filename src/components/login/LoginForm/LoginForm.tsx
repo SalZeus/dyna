@@ -2,6 +2,7 @@
 import { handleLogin } from "app/actions";
 import styles from "./LoginForm.module.scss";
 import { SyntheticEvent } from "react";
+import Link from "next/link";
 
  export const runtime = "edge"
 
@@ -25,6 +26,7 @@ export const LoginForm = () => {
         <input type="password" name="password" placeholder="password" />
         <input type="submit" name="submit" value="Login" />
       </form>
+      <Link className={styles.NewAccountForm__createAccount} href="/signup">Tambien puedes crear una cuenta si no has hecho una</Link>
     </div>
   );
 }

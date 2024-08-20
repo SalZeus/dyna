@@ -1,15 +1,27 @@
 import styles from "./Hero.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { MotionDiv } from "../MotionDiv/MotionDiv";
+import { easeInOut } from "framer-motion";
 
 export const Hero=()=>{
     return(
         <section className={styles.Hero}>
             
-            <div className={styles.title}>
+            <MotionDiv className={styles.title}
+            initial={{ x: -800, scale: 0.5 }}
+            animate={{ x: [-400, 400, 0], scale: [0, 3, 1] }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            drag="x" dragConstraints={{left: 100, right: 100}} dragSnapToOrigin
+            >
                 <h1>DYNA</h1>
-            </div>
+            </MotionDiv>
+            <MotionDiv
+            initial={{ x: -800, scale: 0.5 }}
+            animate={{ x: [-600, 100, 0], scale: [0, 1] }}
+            transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}>
                 <h3>Soluciones de iluminación</h3>
+            </MotionDiv>
             <section className={styles.heroSupport}>
                 <div>
                     <div>
