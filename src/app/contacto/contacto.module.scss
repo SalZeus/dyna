@@ -5,29 +5,47 @@ $border-color: #302c3f;
 $text-color: #fff;
 $gradient: linear-gradient(270deg, #4f56ff, #ff4980);
 $main-contrast: #ff4980;
+.contactSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contact {
+        margin: 25px;
+        display: block;
+        width: 70vw;
+        border: #ff4980 solid 2px;
 
-.contact {
-    margin: 25px;
-    display: block;
-    margin: 5rem auto 0;
-    max-width: 30rem;
-    border: #ff4980 solid 2px;
-    &__title{
-        text-shadow: #4f56ff solid 1px;
-    }
-    &__inputHalf{
-        width: 50%;
-        border: #4f56ff solid 2px;
-        border-radius: 2rem;
-    }
-    &__inputFull{
-        width: 100%;
-        border: #4f56ff solid 2px;
-        border-radius: 2rem;
-    }
-    &__submit{
-        width: 100%;
-        border: #4f56ff solid 2px;
-        border-radius: 2rem;
+        &__card{
+            padding: 5rem;
+            &__title{
+                text-shadow: #4f56ff solid 1px;
+                padding: 5rem;
+            }
+            &__inputHalf{
+                width: 50%;
+                border: #4f56ff solid 2px;
+                border-radius: 2rem;
+                background-color: $main-contrast;
+                color: #302c3f;
+                &::placeholder {
+                    color: #999; /* Lighter color for better readability */
+                    opacity: 0.7; /* Enhance visibility without being too bold */
+                  }
+            }
+            &__inputFull{
+                width: 100%;
+                border: #4f56ff solid 2px;
+                border-radius: 2rem;
+                &::placeholder {
+                    color: #999; /* Lighter color for better readability */
+                    opacity: 0.7; /* Enhance visibility without being too bold */
+                  }
+            }
+            &__submit{
+                width: 100%;
+                border: #4f56ff solid 2px;
+                border-radius: 2rem;
+            }
+        }
     }
 }

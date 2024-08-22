@@ -17,6 +17,7 @@ export const ProductCard = ({ product }: ProductCardInterface) => {
           height={320}
           width={320}
           loading="eager"
+          style={{objectFit: "contain", borderRadius: "4rem"}}
         />
         <div className={styles.ProductCard__info}>
           <h3>{product.title}</h3>

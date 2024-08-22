@@ -11,6 +11,14 @@ $main-contrast: #ff4980;
     flex-flow: row nowrap;
     align-items: center;
     padding: 0 2rem;
+    justify-content: space-around;
+    h1{
+      flex-grow: 1;
+      font-size: 3rem;
+    }
+    nav{
+      flex-grow: 3;
+    }
   
     &__list {
       display: flex;
@@ -19,7 +27,7 @@ $main-contrast: #ff4980;
       column-gap: 2.5rem;
       margin: 0 auto;
       padding: 2rem;
-      justify-content: center;
+      justify-content: space-evenly;
   
       & > li > a {
         color: $text-color;
@@ -30,11 +38,12 @@ $main-contrast: #ff4980;
     }
   
     &__user {
-      margin-left: auto;
       display: flex;
       flex-flow: wrap;
       align-items: center;
       column-gap: 1rem;
+      justify-content: flex-end;
+      flex-grow: 1.2;
   
       & > a {
         color: $text-color;

@@ -3,23 +3,31 @@ import Link from "next/link";
 import Image from "next/image";
 import { MotionDiv } from "../MotionDiv/MotionDiv";
 import { easeInOut } from "framer-motion";
+import { Major_Mono_Display } from "next/font/google";
+
+const majorMonoDisplay = Major_Mono_Display({
+    weight: ["400"],
+    subsets: ["latin-ext"],
+    preload: true,
+    style: "normal"
+  })
 
 export const Hero=()=>{
     return(
         <section className={styles.Hero}>
             
             <MotionDiv className={styles.title}
-            initial={{ x: -800, scale: 0.5 }}
-            animate={{ x: [-400, 400, 0], scale: [0, 3, 1] }}
+            initial={{ y: -80, scale: 0.5, opacity: 0.2 }}
+            animate={{ y: [40, -40, 0], scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
             drag="x" dragConstraints={{left: 100, right: 100}} dragSnapToOrigin
             >
-                <h1>DYNA</h1>
+                <h1 className={majorMonoDisplay.className}>DYNA</h1>
             </MotionDiv>
             <MotionDiv
-            initial={{ x: -800, scale: 0.5 }}
-            animate={{ x: [-600, 100, 0], scale: [0, 1] }}
-            transition={{ duration: 1.5, ease: "easeInOut", delay: 1 }}>
+            initial={{ y: -80, scale: 0.5, opacity: 0.1 }}
+            animate={{ y: [-600, 100, 0], scale: [0, 1], opacity: [0.3, 0.5, 0.6, 0.8, 1], rotate: [0, 0, 0, 0, 360] }}
+            transition={{ duration: 3, ease: "easeInOut", delay: 1 }}>
                 <h3>Soluciones de iluminación</h3>
             </MotionDiv>
             <section className={styles.heroSupport}>
@@ -27,7 +35,7 @@ export const Hero=()=>{
                     <div>
                         <Image 
                             alt="" 
-                            src="/images/illumination.png"       
+                            src="/images/heroLighting.jpg"       
                             width={500}
                             height={500}
                             priority={false}>

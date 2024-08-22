@@ -3,13 +3,19 @@ import type { Metadata } from "next";
 import {Header} from "../components/shared/Header";
 import {Footer} from "../components/shared/Footer"
 import "app/scss/globals.scss";
-import {Ubuntu} from "next/font/google";
+import {Ubuntu, Major_Mono_Display} from "next/font/google";
 
 
 const ubuntu = Ubuntu({
   weight: ["300", "500", "700"],
   subsets: ["latin-ext"]
 
+})
+const majorMonoDisplay = Major_Mono_Display({
+  weight: ["400"],
+  subsets: ["latin-ext"],
+  preload: true,
+  style: "normal"
 })
 
 export const metadata: Metadata = {
