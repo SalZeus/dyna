@@ -25,6 +25,7 @@ export const Hero=()=>{
                 <h1 className={majorMonoDisplay.className}>DYNA</h1>
             </MotionDiv>
             <MotionDiv
+            className={styles.title}
             initial={{ y: -80, scale: 0.5, opacity: 0.1 }}
             animate={{ y: [-600, 100, 0], scale: [0, 1], opacity: [0.3, 0.5, 0.6, 0.8, 1], rotate: [0, 0, 0, 0, 360] }}
             transition={{ duration: 3, ease: "easeInOut", delay: 1 }}>
