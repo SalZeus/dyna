@@ -30,7 +30,22 @@ const BentoGrid = () => {
                 <h3 className={styles.title__h3}>Soluciones de iluminación</h3>
         </MotionDiv>
         <div className={styles.bentoGrid}>
-        <MotionDiv drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin className={styles.bento1}>Bento 1</MotionDiv>
+        <MotionDiv 
+        drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin 
+        className={styles.bento1}
+        whileHover={{scale: 1.2,zIndex:1 ,transition: {duration: 0.2, ease: "easeInOut"}}}
+        >
+            <Image
+                alt="" 
+                src="/images/gradientedLight.png"       
+                fill
+                sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: 'contain', // cover, contain, none
+                }}
+                priority={false}>
+            </Image>
+        </MotionDiv>
         <div className={styles.bento2}>
         <MotionDiv className={styles.title}
             initial={{ y: -80, scale: 0.5, opacity: 0.2 }}
@@ -41,7 +56,22 @@ const BentoGrid = () => {
                 <h1 className={majorMonoDisplay.className}>DYNA</h1>
             </MotionDiv>
         </div>
-        <MotionDiv drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin className={styles.bento3}>Bento 3</MotionDiv>
+        <MotionDiv 
+            drag dragConstraints={{left: 100, right: 100}} 
+            dragSnapToOrigin 
+            whileHover={{scale: 1.2,zIndex:1 ,transition: {duration: 0.2, ease: "easeInOut"}}}
+            className={styles.bento3}>
+        <Image
+                alt="" 
+                src="/images/storeIconGlass.png"       
+                fill
+                sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: 'contain', // cover, contain, none
+                }}
+                priority={false}>
+            </Image>
+        </MotionDiv>
         <MotionDiv drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin className={styles.bento4}>Bento 4</MotionDiv>
         <MotionDiv drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin className={styles.bento5}>Bento 5</MotionDiv>
         <MotionDiv drag dragConstraints={{left: 100, right: 100}} dragSnapToOrigin className={styles.bento6}>Bento 6</MotionDiv>
